@@ -1,0 +1,22 @@
+@import "../../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../../node_modules/bulma/sass/utilities/functions.sass";
+
+$navbar-height: 4rem;
+
+@import "../../../node_modules/bulma/bulma.sass";
+
+@import "../../../node_modules/bulma-extensions/dist/css/bulma-extensions.min.css";
+
+@import url('https://fonts.googleapis.com/css?family=Muli|Markazi+Text');
+
+.navbar-menu{
+  font-family: 'Markazi Text', serif;
+  font-size: 1.4em;
+}
+.navbar-item{
+  margin-left: 0.4em;
+}
+
+body, span, p{
+  font-family: 'Muli', sans-serif;
+}
