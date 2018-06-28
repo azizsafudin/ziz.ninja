@@ -7,7 +7,7 @@
             <div class="card-content">
               <div class="level">
                 <div class="level-left">
-                  <img src="https://secure.gravatar.com/avatar/2771344eb2d83dfe9555a2f7bf808fb7" class="level-item profile is-hidden-mobile">
+                  <img src="../../assets/img/profile.png" class="level-item profile is-hidden-mobile">
                   <h3 class="level-item title">About Me</h3>
                 </div>
               </div>

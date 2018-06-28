@@ -1,14 +1,10 @@
 <template>
-  <section class="section">
+  <section class="section is-medium">
     <div class="container">
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-parent">
-          <card :project="projects[0]" @clicked="showModal"></card>
-          <card :project="projects[2]" @clicked="showModal"></card>
-          <card :project="projects[3]" @clicked="showModal"></card>
-          <card :project="projects[5]" @clicked="showModal"></card>
-          <card :project="projects[1]" @clicked="showModal"></card>
-
+          <!--@clicked="showModal"-->
+          <card :project="projects[0]"></card>
         </div>
       </div>
     </div>

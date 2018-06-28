@@ -2,7 +2,7 @@
   <transition name="modal">
     <div class="modal-mask" @click="$emit('close')">
       <div class="modal-wrapper">
-        <div class="modal-container notification is-primary" v-bind:class="['is-' + project.colour]" @click.stop>
+        <div class="modal-container notification" v-bind:class="['is-' + project.colour]" @click.stop>
           <button class="delete" @click="$emit('close')"></button>
           <h3 class="title">{{project.title}}</h3>
           <p>{{project.description}}</p>
