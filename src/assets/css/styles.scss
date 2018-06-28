@@ -20,3 +20,11 @@ $navbar-height: 4rem;
 body, span, p{
   font-family: 'Muli', sans-serif;
 }
+
+.is-child {
+  transition: box-shadow .3s;
+  border-radius:10px;
+}
+.is-child:hover {
+  box-shadow: 0 10px 30px rgba(33,33,33,.23);
+}
