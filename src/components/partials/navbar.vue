@@ -2,12 +2,12 @@
   <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item">
-          <!--🐱‍👤🍣-->
+          <!--🐱‍👤🍣🍱-->
           <span
             @mouseover="showTitle = true"
             @mouseleave="showTitle = false"
             class="has-text-weight-semibold is-size-3">
-            🐱‍👤
+            🍱
           </span>
         </router-link>
         <transition name="fade">

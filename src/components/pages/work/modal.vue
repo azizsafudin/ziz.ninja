@@ -5,7 +5,8 @@
         <div class="modal-container notification" v-bind:class="['is-' + project.colour]" @click.stop>
           <button class="delete" @click="$emit('close')"></button>
           <h3 class="title">{{project.title}}</h3>
-          <p>{{project.description}}</p>
+          <p v-html="project.description"></p>
+          <carousel :slides="project.images"></carousel>
         </div>
       </div>
     </div>
@@ -13,8 +14,11 @@
 </template>
 
 <script>
+  import Carousel from './carousel.vue';
+
   export default {
     name: 'modal',
+    components: {Carousel},
     props: {
       project: {
         type: Object,
@@ -58,6 +62,11 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
+  }
+  @media only screen and (max-device-width: 768px) {
+    .modal-container {
+      width:100%;
+    }
   }
 
   .modal-enter {
