@@ -6,6 +6,11 @@ import router from './router'
 require('vue2-animate/dist/vue2-animate.min.css')
 
 Vue.config.productionTip = false
+Vue.filter('truncate', function (string, value) {
+  if (string && string.length > value - 3) return string.substring(0, value) + '...';
+  else return string;
+});
+
 
 /* eslint-disable no-new */
 new Vue({

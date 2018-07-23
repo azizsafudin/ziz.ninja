@@ -5,8 +5,15 @@
         <div class="modal-container notification" v-bind:class="['is-' + project.colour]" @click.stop>
           <button class="delete" @click="$emit('close')"></button>
           <h3 class="title">{{project.title}}</h3>
-          <p v-html="project.description"></p>
-          <carousel :slides="project.images"></carousel>
+          <h5 class="subtitle" :inner-html.prop="project.subtitle |  truncate(100)"></h5>
+          <div class="columns">
+            <div class="column">
+              <p :inner-html.prop="project.description"></p>
+            </div>
+            <div class="column is-5">
+              <carousel :slides="project.images"></carousel>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,10 +69,14 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
+    max-height: 100vh;
   }
   @media only screen and (max-device-width: 768px) {
     .modal-container {
       width:100%;
+      min-height:80%;
+      overflow: scroll;
+      border-radius:0px;
     }
   }
 

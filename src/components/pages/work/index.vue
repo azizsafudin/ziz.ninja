@@ -3,8 +3,7 @@
     <div class="container">
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-parent">
-          <!--@clicked="index = key"-->
-          <card v-for="(project,key) in projects" :project="project" :key="project.id"></card>
+          <card v-for="(project,key) in projects" :project="project" :key="project.id" @clicked="index = key"></card>
         </div>
       </div>
     </div>

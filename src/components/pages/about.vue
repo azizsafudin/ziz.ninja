@@ -37,10 +37,3 @@
     name: 'about',
   }
 </script>
-
-<style>
-  .profile {
-    width: 6em;
-    border-radius: 50%;
-  }
-</style>

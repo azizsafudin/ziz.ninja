@@ -6,6 +6,7 @@
           <div class="columns">
             <!--<div class="column is-one-fifth"></div>-->
             <div class="column is-one-fifth has-text-right-desktop">
+              <img src="../../assets/img/profile.png" class="level-item profile is-hidden-mobile is-inline">
               <h1 class="title">
                 Abdul Aziz
               </h1>

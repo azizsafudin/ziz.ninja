@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        &copy; 2018 Abdul Aziz
+        &copy; {{currYear === 2018?'':'2018 - '}} {{currYear}} Abdul Aziz
       </p>
     </div>
   </footer>
@@ -12,7 +12,7 @@
     name: 'foot',
     data() {
       return {
-
+        currYear: (new Date()).getFullYear(),
       }
     }
   }
