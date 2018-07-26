@@ -21,11 +21,11 @@ body, span, p{
   font-family: 'Muli', sans-serif;
 }
 
-.is-child {
+.notification {
   transition: box-shadow .3s;
   border-radius:10px;
 }
-.is-child:hover {
+.notification:hover {
   box-shadow: 0 10px 30px rgba(33,33,33,.23);
 }
 

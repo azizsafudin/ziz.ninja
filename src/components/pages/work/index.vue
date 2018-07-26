@@ -1,14 +1,36 @@
 <template>
-  <section class="section is-medium">
-    <div class="container">
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-parent">
-          <card v-for="(project,key) in projects" :project="project" :key="project.id" @clicked="index = key"></card>
+  <div>
+    <section class="section">
+      <div class="container">
+        <h3 class="title">📚 My Projects</h3>
+        <div class="card-container">
+          <card
+            :project="project"
+            :key="project.id"
+            @clicked="index = key"
+            v-for="(project,key) in projects"
+            v-if="!project.deprecated && project.show">
+          </card>
         </div>
       </div>
-    </div>
-    <modal v-if="index > -1" :project="projects[index]" @close="index = -1"></modal>
-  </section>
+      <modal v-if="index > -1" :project="projects[index]" @close="index = -1"></modal>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3 class="title">🕸 Deprecated Projects</h3>
+        <div class="card-container">
+          <card
+                :project="project"
+                :key="project.id"
+                @clicked="index = key"
+                v-for="(project,key) in projects"
+                v-if="project.deprecated && project.show"
+                :mini="true">
+          </card>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -28,3 +50,13 @@
     },
   }
 </script>
+
+<style>
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-container>*{
+    flex: 1 1 20em;
+  }
+</style>

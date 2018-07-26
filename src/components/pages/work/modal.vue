@@ -5,13 +5,27 @@
         <div class="modal-container notification" v-bind:class="['is-' + project.colour]" @click.stop>
           <button class="delete" @click="$emit('close')"></button>
           <h3 class="title">{{project.title}}</h3>
-          <h5 class="subtitle" :inner-html.prop="project.subtitle |  truncate(100)"></h5>
+          <h5 class="subtitle" :inner-html.prop="project.subtitle"></h5>
           <div class="columns">
             <div class="column">
-              <p :inner-html.prop="project.description"></p>
+              <div class="content" :inner-html.prop="project.description"></div>
+              <p class="buttons" style="margin-top:2em;">
+                <a v-if="project.github" class="button is-light" :href="project.github" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+                <a v-if="project.url" class="button is-light" :href="project.url" target="_blank">
+                  <span class="icon">
+                    <i class="fas fa-external-link-alt"></i>
+                  </span>
+                  <span>Link</span>
+                </a>
+              </p>
             </div>
-            <div class="column is-5">
-              <carousel :slides="project.images"></carousel>
+            <div class="column is-5" v-if="project.images.length > 0" >
+              <carousel :slides="project.images" ></carousel>
             </div>
           </div>
         </div>
@@ -26,20 +40,7 @@
   export default {
     name: 'modal',
     components: {Carousel},
-    props: {
-      project: {
-        type: Object,
-        default : {
-          title       : 'Project title',
-          subtitle    : 'Project subtitle',
-          description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget finibus nisl. Aliquam finibus id nisi a interdum. Duis malesuada euismod gravida. Fusce viverra massa quis mi suscipit, sed cursus tortor tincidunt. Praesent pulvinar, enim porta convallis tempus, urna lectus tempus eros, in placerat erat nisi eu ante. Donec maximus, mauris ut ultrices euismod, velit ipsum imperdiet dui, eu eleifend magna ante hendrerit enim. Vivamus et nibh rhoncus, mattis lacus vitae, blandit diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vitae pharetra ex. Suspendisse mollis lectus id leo egestas, et aliquet neque suscipit. Quisque pharetra ornare urna sit amet sollicitudin. Aenean et nisl lectus. Quisque tristique nisi orci, at porta sapien porta sit amet.',
-          date_start  : '2018-01-01',
-          date_end    : '2019-01-01',
-          img_url     : '',
-          colour      : 'warning',
-        }
-      }
-    },
+    props: ['project']
   }
 </script>
 
