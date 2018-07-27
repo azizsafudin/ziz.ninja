@@ -2,7 +2,11 @@
 @import "../../../node_modules/bulma/sass/utilities/functions.sass";
 
 $navbar-height: 4rem;
-
+$primary: #49A1B2;
+$success: #35B25B;
+$warning: #FFDF45;
+$info: #007FB2;
+$danger: #CA1D1B;
 @import "../../../node_modules/bulma/bulma.sass";
 
 @import "../../../node_modules/bulma-extensions/dist/css/bulma-extensions.min.css";
@@ -15,6 +19,9 @@ $navbar-height: 4rem;
 }
 .navbar-item{
   margin-right: 1em;
+}
+.navbar {
+  box-shadow: 0 5px 30px rgba(33,33,33,.1);
 }
 
 body, span, p{
@@ -32,4 +39,11 @@ body, span, p{
 .profile {
   width: 6em;
   border-radius: 50%;
+}
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }

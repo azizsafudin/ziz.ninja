@@ -10,11 +10,17 @@
             <div class="column">
               <div class="content" :inner-html.prop="project.description"></div>
               <p class="buttons" style="margin-top:2em;">
-                <a v-if="project.github" class="button is-light" :href="project.github" target="_blank">
+                <a v-if="project.github" class="button is-light" :href="'https://github.com/'+project.github" target="_blank">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>GitHub</span>
+                </a>
+                <a v-if="project.gitlab" class="button is-light" :href="'https://gitlab.com/'+project.gitlab" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-gitlab"></i>
+                  </span>
+                  <span>GitLab</span>
                 </a>
                 <a v-if="project.url" class="button is-light" :href="project.url" target="_blank">
                   <span class="icon">
