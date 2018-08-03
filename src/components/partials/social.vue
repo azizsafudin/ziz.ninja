@@ -6,9 +6,9 @@
     <span class="icon tooltip is-tooltip-top-desktop" v-bind:class="['is-size-' + size]" data-tooltip="xmodulus">
       <a href="https://linkedin.com/in/xmodulus" class="fab fa-linkedin-in"></a>
     </span>
-    <span class="icon tooltip is-tooltip-top-desktop" v-bind:class="['is-size-' + size]" data-tooltip="@codertweets">
-      <a href="https://twitter.com/codertweets" class="fab fa-twitter"></a>
-    </span>
+    <!--<span class="icon tooltip is-tooltip-top-desktop" v-bind:class="['is-size-' + size]" data-tooltip="@codertweets">-->
+      <!--<a href="https://twitter.com/codertweets" class="fab fa-twitter"></a>-->
+    <!--</span>-->
     <span class="icon tooltip is-tooltip-top-desktop" v-bind:class="['is-size-' + size]" data-tooltip="modulus#1400">
       <a class="fab fa-discord"></a>
     </span>

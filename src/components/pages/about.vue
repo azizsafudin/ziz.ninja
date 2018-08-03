@@ -16,8 +16,9 @@
               I have been programming and tinkering as a hobby for most of my life, working mostly with PHP and Javascript.
               I enjoy learning languages and hope to work in the field of language processing as it combines my love of both programming and linguistics.
               <br><br>
-              Here is my <a class="has-text-weight-bold" href="https://drive.google.com/open?id=1H-xki_bS0wAhrlplLagvvlVqagVUuUAp">résumé</a> for your perusal.
+              📜 Here is my <a class="has-text-weight-bold" href="https://drive.google.com/open?id=1H-xki_bS0wAhrlplLagvvlVqagVUuUAp">résumé</a> for your perusal.
               </div>
+              💌 You may contact me at <a class="has-text-weight-bold" href="mailto:me@ziz.ninja">me@ziz.ninja</a>
               <span class="is-divider"></span>
               <social></social>
               <p-g-p></p-g-p>
