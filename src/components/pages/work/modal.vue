@@ -10,19 +10,19 @@
             <div class="column">
               <div class="content" :inner-html.prop="project.description"></div>
               <p class="buttons" style="margin-top:2em;">
-                <a v-if="project.github" class="button is-light" :href="'https://github.com/'+project.github" target="_blank">
+                <a v-if="project.github" class="button is-light" :href="'https://github.com/'+project.github" target="_blank" @click="gitRepoClicked">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>GitHub</span>
                 </a>
-                <a v-if="project.gitlab" class="button is-light" :href="'https://gitlab.com/'+project.gitlab" target="_blank">
+                <a v-if="project.gitlab" class="button is-light" :href="'https://gitlab.com/'+project.gitlab" target="_blank" @click="gitRepoClicked">
                   <span class="icon">
                     <i class="fab fa-gitlab"></i>
                   </span>
                   <span>GitLab</span>
                 </a>
-                <a v-if="project.url" class="button is-light" :href="project.url" target="_blank">
+                <a v-if="project.url" class="button is-light" :href="project.url" target="_blank" @click="externalLinkClicked">
                   <span class="icon">
                     <i class="fas fa-external-link-alt"></i>
                   </span>
@@ -46,7 +46,23 @@
   export default {
     name: 'modal',
     components: {Carousel},
-    props: ['project']
+    props: ['project'],
+    methods:{
+      gitRepoClicked(){
+        this.$ga.event({
+          eventCategory: 'projects',
+          eventAction: 'gitRepoClick',
+          eventLabel: this.project.id,
+        })
+      },
+      externalLinkClicked(){
+        this.$ga.event({
+          eventCategory: 'projects',
+          eventAction: 'externalLinkClick',
+          eventLabel: this.project.id,
+        })
+      }
+    }
   }
 </script>
 

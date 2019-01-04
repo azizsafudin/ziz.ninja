@@ -7,7 +7,7 @@
           <card
             :project="project"
             :key="project.id"
-            @clicked="index = key"
+            @clicked="cardClicked(key)"
             v-for="(project,key) in projects"
             v-if="!project.deprecated && project.show">
           </card>
@@ -22,7 +22,7 @@
           <card
                 :project="project"
                 :key="project.id"
-                @clicked="index = key"
+                @clicked="cardClicked(key)"
                 v-for="(project,key) in projects"
                 v-if="project.deprecated && project.show"
                 :mini="true">
@@ -48,6 +48,16 @@
         index: -1,                 //  which project to show in modal
       }
     },
+    methods:{
+      cardClicked(key){
+        this.index = key;
+        this.$ga.event({
+          eventCategory: 'projects',
+          eventAction: 'projectClick',
+          eventLabel: this.projects[this.index].id,
+        })
+      }
+    }
   }
 </script>
 

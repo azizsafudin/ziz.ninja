@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../components/pages/home.vue'
 import Work from '../components/pages/work/index.vue'
 import About from '../components/pages/about.vue'
+import Namecard from '../components/pages/namecard.vue'
 
 Vue.use(Router);
 
@@ -35,6 +36,15 @@ const router = new Router({
       component: About,
       meta: {
         title: 'Abdul Aziz - About',
+      }
+    },
+    {
+      path: '/namecard',
+      name: 'Namecard',
+      redirect: '/about',
+      component: Namecard,
+      meta: {
+        title: 'Abdul Aziz - Namecard'
       }
     }
   ],

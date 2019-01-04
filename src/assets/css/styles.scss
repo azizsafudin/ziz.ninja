@@ -9,7 +9,8 @@ $info: #007FB2;
 $danger: #CA1D1B;
 @import "../../../node_modules/bulma/bulma.sass";
 
-@import "../../../node_modules/bulma-extensions/dist/css/bulma-extensions.min.css";
+@import "../../../node_modules/bulma-extensions/bulma-divider/src/sass/index.sass";
+@import "../../../node_modules/bulma-extensions/bulma-tooltip/src/sass/index.sass";
 
 @import url('https://fonts.googleapis.com/css?family=Muli|Convergence');
 
